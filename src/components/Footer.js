@@ -3,7 +3,9 @@ import React from 'react'
 const Footer = () => {
 
   return(
-    <> <h1>This is the footer</h1></>
+    <> 
+      <p> &copy; Presented by the Instruction Team | 2023</p>
+    </>
   )
 }
 
