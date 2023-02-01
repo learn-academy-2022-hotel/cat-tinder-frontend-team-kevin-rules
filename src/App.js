@@ -1,6 +1,6 @@
 import { React, useState} from 'react'
-import cats from './mockCats'
 import { Route, Routes } from 'react-router-dom'
+import mockCats from './mockCats'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CatShow from './pages/CatShow'
@@ -13,15 +13,14 @@ import NotFound from './pages/NotFound'
 
 const App = () => {
   
-  const [mockCats, setMockCats] = useState(cats)
+  const [cats, setCats] = useState(mockCats)
 
-  console.log(mockCats)
+  console.log(cats)
 
   return(
     <>
      <Header />
      <Routes>
-      <h1>Cat Tinder Hooray!</h1>
        <Route path="/" element={<Home/>} />
        <Route path="/catedit" element={<CatEdit/>} />
        <Route path="/catindex" element={<CatIndex/>} />
