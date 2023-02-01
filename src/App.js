@@ -15,11 +15,12 @@ const App = () => {
   
   const [cats, setCats] = useState(mockCats)
 
-  console.log(cats)
+  // console.log(cats)
 
   return(
     <>
      <Header />
+     <h1> Welcome to Kevin Tails </h1>
      <Routes>
        <Route path="/" element={<Home/>} />
        <Route path="/catedit" element={<CatEdit/>} />
