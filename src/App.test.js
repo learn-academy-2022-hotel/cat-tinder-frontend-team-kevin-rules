@@ -2,6 +2,8 @@
 import React from "react";
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from "react-router-dom";
+// import userEvent from "@testing-library/user-event";
+
 // component
 import App from "./App"
 
@@ -17,24 +19,24 @@ describe("<App />", () => {
       </BrowserRouter>
     )
     // screen.debug()
-    // screen.logTestingPlaygroundURL()
+    screen.logTestingPlaygroundURL()
     // act
-    const greeting = screen.getByText("Welcome to Kevin Tails")
+    const greeting = screen.getByRole('img', {
+      name: /welcome to kevin tail in cat font/i
+    })
     // assert
     expect(greeting).toBeInTheDocument()
   })
 
-  it("has a heading", () => {
+  it("has a footer", () => {
     render( 
       <BrowserRouter>
         <App />
       </BrowserRouter>
     )
     
-    const heading = screen.getByRole("heading", {
-      name: /kevin tails/i
-    })
-    // console.log("heading", heading)
-    expect(heading).toBeInTheDocument()
+    const footer = screen.getByText(/instruction team/i)
+    // console.log("footer", footer)
+    expect(footer).toBeInTheDocument()
   })
 })

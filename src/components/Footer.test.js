@@ -12,7 +12,7 @@ describe("<Footer />", () => {
         <Footer />
       </BrowserRouter>
     )
-    screen.debug()
+    // screen.debug()
     const footer = screen.getByText(/instruction team/i)
     expect(footer).toBeInTheDocument()
   })

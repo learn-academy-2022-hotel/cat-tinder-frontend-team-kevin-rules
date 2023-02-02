@@ -102,4 +102,10 @@ Time:        0.326 s, estimated 1 s
 - update the applicable component
 - see valid pass
 
+## Resources for styling
+- https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-with-logo
+- https://www.fontspace.com/category/cat
 
+
+## Resources for testing
+- https://claritydev.net/blog/improving-react-testing-library-tests/
