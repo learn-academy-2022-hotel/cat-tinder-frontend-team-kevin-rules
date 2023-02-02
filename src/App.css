@@ -2,6 +2,9 @@ h1, body {
   text-align: center;
 }
 
+body {
+  background-color: rgba(12, 12, 124, 0.335);
+}
 .index-cards {
   display: flex;
   flex-wrap: wrap;

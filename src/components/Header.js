@@ -7,7 +7,7 @@ const Header = () => {
   return(
     <> 
       <div className="m-4">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <a href="/" className="navbar-brand">
               <img src={ greeting } height="28" alt="welcome to kevin tail in cat font" />
