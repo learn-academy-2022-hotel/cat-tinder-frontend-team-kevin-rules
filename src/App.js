@@ -15,7 +15,9 @@ const App = () => {
   
   const [cats, setCats] = useState(mockCats)
 
-  console.log(cats)
+  const createNewCat = (newCatObject) => {
+    console.log("new cat obj: ", newCatObject)
+  }
 
   return(
     <>
@@ -25,7 +27,7 @@ const App = () => {
        <Route path="/catindex" element={<CatIndex cats={cats}/>} />
        <Route path="/catshow/:id" element={<CatShow cats={cats}/>} />
        <Route path="/catedit" element={<CatEdit/>} />
-       <Route path="/catnew" element={<CatNew/>} />
+       <Route path="/catnew" element={<CatNew createNewCat={createNewCat}/>} />
        <Route path="*" element={<NotFound/>} />
      </Routes>
      <Footer />

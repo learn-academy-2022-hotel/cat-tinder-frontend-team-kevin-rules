@@ -9,5 +9,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  }
+}
 
+a {
+  text-decoration: none;
+}
+
+.home-div {
+  height: 80vh;
+}
