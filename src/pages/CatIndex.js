@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 const CatIndex = ({ cats }) => {
   return (
     <main className="index-cards">
-      {cats.map((cat, index) => {
+      {cats?.map((cat, index) => {
         return (
           <Card
             color="light"

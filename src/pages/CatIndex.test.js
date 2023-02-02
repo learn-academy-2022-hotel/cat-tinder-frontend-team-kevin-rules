@@ -5,14 +5,25 @@ import CatIndex from './CatIndex'
 import mockCats from '../mockCats'
 
 describe("<CatIndex />", () => {
-  it("renders without crashing", () => {})
+  it("renders without crashing", () => {
+   const div = document.createElement("div")
+        render(
+        <BrowserRouter>
+        <CatIndex />
+        </BrowserRouter>
+        , div)
+      })
+    
   it("renders cat cards", () => {
     const div = document.createElement("div")
-    render(<CatIndex cats={mockCats} />, div)
+    render(
+    <BrowserRouter>
+    <CatIndex cats={mockCats} />
+    </BrowserRouter>, div)
     mockCats.forEach(cat => {
       const catName = screen.getByText(cat.name)
       expect(catName).toBeInTheDocument()
     })
+  
   })
 })
-
