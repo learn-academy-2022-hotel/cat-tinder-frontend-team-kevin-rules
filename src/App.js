@@ -11,7 +11,6 @@ import CatNew from './pages/CatNew'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
-
 const App = () => {
   
   const [cats, setCats] = useState(mockCats)
@@ -21,7 +20,6 @@ const App = () => {
   return(
     <>
      <Header />
-     <h1> Welcome to Kevin Tails </h1>
      <Routes>
        <Route path="/" element={<Home/>} />
        <Route path="/catindex" element={<CatIndex cats={cats}/>} />

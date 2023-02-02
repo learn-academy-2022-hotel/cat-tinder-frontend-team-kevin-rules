@@ -1,4 +1,4 @@
-h1 {
+h1, body {
   text-align: center;
 }
 
@@ -7,3 +7,4 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   }
+
