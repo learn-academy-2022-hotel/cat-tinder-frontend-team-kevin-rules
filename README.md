@@ -109,3 +109,66 @@ Time:        0.326 s, estimated 1 s
 
 ## Resources for testing
 - https://claritydev.net/blog/improving-react-testing-library-tests/
+
+
+## FETCH
+
+controller  ----> CRUD action
+index ---> read
+create ---> create
+update ---> update
+destroy ---> delete
+
+## Read Fetch Request Process
+- create a function named as the crud action on App.js
+- create a state variable to store the data using useState react hook
+- add fetch request to the code block of the function
+- for read fetch request, we will need to perform the function call using the useEffect react hook
+- import the useEffect from react
+
+useEffect(() => {readCats}, []) will trigger the readCats()
+ - the action to execute () => { readCats() }
+ - dependency value []
+
+basic fetch structure
+```javascript
+fetch("url")
+  // handle the response by converting it to json
+  .then(response => response.json())
+  // handle the data by printing to the console
+  .then(json => console.log(json))
+  // handle the error
+  .catch(error => console.log("Request failed", error))
+```
+
+Fetch returns a promise
+  - fulfilled: successful request
+  - rejected: failed request
+  - pending: waiting on response
+
+.then() allows us to handle the response
+.catch() allows us to handle the errors
+
+## Create Fetch Request Process
+```javascript
+  // create a function named as the crud action on App.js
+  //  the create function will need the new data entry to send in the request ---> parameter
+  const createNewCat = (newCatObject) => {
+    // add fetch request to the code block of the function
+    // fetch request will need url and a second argument to properly configure the data as json
+    fetch("http://localhost:3000/cats", {
+      // that argument will be an object that includes body, headers, and method
+      body: JSON.stringify(newCatObject),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      // then tell it how to handle the response
+      .then(response => response.json())
+      // using the `payload` to trigger the readCat() so all the cats including this new data entry are displayed
+      .then(payload => readCats())
+      .catch(errors => console.log("cat create errors:", errors))
+  }
+```
+- createNewCat() is triggered by the button on the NewCat.js
