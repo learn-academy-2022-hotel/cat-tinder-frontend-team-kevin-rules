@@ -35,3 +35,26 @@ footer {
   width: 100%;
   height: 2.5rem;
 }
+
+/* ---INDEX--- */
+.index-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* nav */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
+/* ---SHOW--- */
+.cat-show-card {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
